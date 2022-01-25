@@ -30,8 +30,9 @@ const scoreBoardEl = document.getElementById('scoreboard')
 
 const winEl = document.getElementById('win')
 const lossEl = document.getElementById('loss')
-const counterEl = document.getElementById('counter')
-
+const totalEl = document.getElementById('counter')
+const winLoss = document.getElementById('winloss')
+ 
 let winCount = 0;
 let lossCount = 0;
 
@@ -70,17 +71,16 @@ btn3.addEventListener('click', () => {
 })
 
 function playGame(answer, userGuess) {
-  total = winCount + lossCount;
-  
   if (answer === userGuess) {
     winCount++
-    winEl.textContent = 'Win: ' + winCount;
+    // winEl.textContent = 'Win: ' + winCount;
   } else {
     // console.log('fail')
     lossCount++
-    lossEl.textContent = 'Loss: ' + lossCount;
+    // lossEl.textContent = 'Loss: ' + lossCount;
   }
-counterEl.textContent = 'Total: ' + total;
+// totalEl.textContent = 'Total: ' + (winCount + lossCount);
+// winLoss.textContent = 'Win/Loss Percentage: ' + Math.round(winCount / lossCount) * 100;
   if (answer === 0) {
     redBall1.classList.add('reveal')
     redBall2.classList.remove('reveal')
@@ -94,8 +94,19 @@ counterEl.textContent = 'Total: ' + total;
     redBall2.classList.remove('reveal')
     redBall1.classList.remove('reveal')
   }
-
+updateScore();
 // console.log('total', total);
 };
 
 console.log(winCount);
+
+function updateScore() {
+  winEl.textContent = 'Wins: ' + winCount;
+lossEl.textContent = 'Losses: ' + lossCount;
+totalEl.textContent = 'Total: ' + (winCount + lossCount);
+function percent() {
+  
+};
+winLoss.textContent = 'Win/Loss Percentage: ' + Math.round(winCount / lossCount * 100);
+
+};
