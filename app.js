@@ -74,13 +74,13 @@ function playGame(answer, userGuess) {
   
   if (answer === userGuess) {
     winCount++
-    winEl.textContent = 'Wins: ' + winCount;
+    winEl.textContent = 'Win: ' + winCount;
   } else {
     // console.log('fail')
     lossCount++
-    lossEl.textContent = 'Losses: ' + lossCount;
+    lossEl.textContent = 'Loss: ' + lossCount;
   }
-counterEl.textContent = 'total: ' + total;
+counterEl.textContent = 'Total: ' + total;
   if (answer === 0) {
     redBall1.classList.add('reveal')
     redBall2.classList.remove('reveal')

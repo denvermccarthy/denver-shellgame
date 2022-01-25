@@ -1,9 +1,8 @@
-* {
 
-
-}
 .choice-container { 
-  border: 3px solid black; 
+  border: 3px solid black;
+  display: flex;
+   
 }
 
 h1 {
@@ -11,20 +10,31 @@ text-align: center;
 }
 
 #scoreboard {
-  text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: black solid 1px;
+height: 400px;
+
+}
+
+.score {
+  border: 1px solid red;
+  margin-left: 30px;
 }
 
 #game-container {
  display: flex;
  flex-direction: row;
- align-content: space-around;
- align-items: center;
+ justify-content: space-around;
+ justify-items: center;
 
 }
 
-img {
- width: 300px;
- height: 300px;
+.choice-container img {
+  width: 100%;
+  height: auto;
+  align-self: flex-start;
 }
 
 .reveal {
@@ -32,4 +42,8 @@ img {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+
+.choice-container button{
+  align-self: flex-end;
 }
