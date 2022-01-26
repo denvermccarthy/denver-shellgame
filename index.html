@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denver's Shell Game!</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 	<h1>Welcome to my Shell Game!!</h1>
+	<section id="game-container">
+		<div id="shell1" class="choice-container">
+			<img src="images/shell.png" alt="A Photo of a Shell">
+			<div id="red-ball"></div>
+			<button id="btn1">Press me!</button>
+		</div>		
+		<div id="shell2" class="choice-container">
+			<img src="images/shell.png" alt="A Photo of a Shell">
+			<div id="red-ball2"></div>
+			<button id="btn2">No, press me!</button>
+		</div>
+		<div id="shell3" class="choice-container">
+			<img src="images/shell.png" alt="A Photo of a Shell">
+			<div id="red-ball3"></div>
+			<button id="btn3">It's actually me</button>
+		</div>
+</section>
+<div id="scoreboard">
+	<span id="win" class="score">Wins: </span><span id="loss" class="score">Losses: </span><span id="counter" class="score">Total: </span><span id="winloss" class="score">Win/Loss Ratio: </span></div>
+
+	<div class="reveal"></div>
+	<script src="app.js"></script>
+
+</body>
+</html>

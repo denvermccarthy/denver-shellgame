@@ -1,0 +1,49 @@
+
+.choice-container { 
+  border: 3px solid black;
+  display: flex;
+   
+}
+
+h1 {
+text-align: center;
+}
+
+#scoreboard {
+display: flex;
+flex-direction: column;
+align-items: center;
+border: black solid 1px;
+height: 400px;
+
+}
+
+.score {
+  border: 1px solid red;
+  margin-left: 30px;
+}
+
+#game-container {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ justify-items: center;
+
+}
+
+.choice-container img {
+  width: auto;
+  height: 50%;
+  align-self: flex-start;
+}
+
+.reveal {
+  background-color: red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.choice-container button{
+  align-self: flex-end;
+}
